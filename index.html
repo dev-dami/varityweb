@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>VarityWeb — Software · Systems · Startups</title>
+  <meta name="description" content="VarityWeb is a software, systems, and startup studio. Home to Dev-Dami's backend engineering portfolio and Skala, a product experiment lab.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://varityweb.com/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://varityweb.com/">
+  <meta property="og:title" content="VarityWeb — Software · Systems · Startups">
+  <meta property="og:description" content="VarityWeb is a software, systems, and startup studio. Home to Dev-Dami's backend engineering portfolio and Skala, a product experiment lab.">
+  <meta property="og:image" content="https://varityweb.com/og.png">
+  <meta property="og:site_name" content="VarityWeb">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://varityweb.com/">
+  <meta name="twitter:title" content="VarityWeb — Software · Systems · Startups">
+  <meta name="twitter:description" content="VarityWeb is a software, systems, and startup studio. Home to Dev-Dami's backend engineering portfolio and Skala, a product experiment lab.">
+  <meta name="twitter:image" content="https://varityweb.com/og.png">
+
+  <!-- JSON-LD structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "VarityWeb",
+    "url": "https://varityweb.com",
+    "description": "Software, systems, and startup studio.",
+    "sameAs": [
+      "https://devdami.varityweb.com",
+      "https://skala.varityweb.com"
+    ]
+  }
+  </script>
+
+  <!-- Preconnect for Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #0a0a0a;
+      --surface: #111;
+      --border: #222;
+      --border-hover: #fff;
+      --text: #f5f5f5;
+      --muted: #888;
+      --faint: #444;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1.5rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 860px;
+    }
+
+    /* ── Header ── */
+    header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .wordmark {
+      display: inline-block;
+      font-size: clamp(2.4rem, 7vw, 4.2rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: #fff;
+    }
+
+    .tagline {
+      margin-top: 0.6rem;
+      color: var(--muted);
+      font-size: 1rem;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── Grid ── */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1px;
+      border: 1px solid var(--border);
+    }
+
+    /* ── Card ── */
+    .card {
+      display: flex;
+      flex-direction: column;
+      background: var(--surface);
+      padding: 2rem;
+      text-decoration: none;
+      color: var(--text);
+      transition: background 0.15s;
+      border-right: 1px solid var(--border);
+    }
+
+    .card:last-child {
+      border-right: none;
+    }
+
+    .card:hover {
+      background: #161616;
+    }
+
+    .card-badge {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+    }
+
+    .card-title {
+      margin-top: 1.2rem;
+      font-size: 1.65rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #fff;
+    }
+
+    .card-desc {
+      margin-top: 0.6rem;
+      color: var(--muted);
+      font-size: 0.93rem;
+      line-height: 1.7;
+      flex: 1;
+    }
+
+    .card-link {
+      margin-top: 1.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--faint);
+      transition: color 0.15s, gap 0.2s;
+    }
+
+    .card:hover .card-link {
+      color: #fff;
+      gap: 0.65rem;
+    }
+
+    .card-link svg {
+      width: 15px;
+      height: 15px;
+      flex-shrink: 0;
+    }
+
+    /* ── Divider ── */
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: var(--border);
+      margin: 3.5rem 0 2rem;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      color: var(--faint);
+      font-size: 0.82rem;
+    }
+
+    footer a {
+      color: var(--faint);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    footer a:hover {
+      color: var(--muted);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      body { padding: 2rem 1rem; }
+      .grid {
+        grid-template-columns: 1fr;
+        border: 1px solid var(--border);
+      }
+      .card {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+      }
+      .card:last-child { border-bottom: none; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <h1 class="wordmark">VarityWeb</h1>
+    <p class="tagline">Software &middot; Systems &middot; Startups</p>
+  </header>
+
+  <main>
+    <div class="grid" role="list">
+
+      <a
+        class="card"
+        href="https://devdami.varityweb.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Open Dev-Dami portfolio"
+        role="listitem"
+      >
+        <span class="card-badge">Portfolio</span>
+
+        <h2 class="card-title">Dev-Dami</h2>
+
+        <p class="card-desc">
+          Backend engineering, systems programming,
+          compilers, runtimes, and infrastructure. Built to last.
+        </p>
+
+        <span class="card-link" aria-hidden="true">
+          Open Portfolio
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 8h10M9 4l4 4-4 4"/>
+          </svg>
+        </span>
+      </a>
+
+      <a
+        class="card"
+        href="https://skala.varityweb.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Open Skala startup"
+        role="listitem"
+      >
+        <span class="card-badge">Startup</span>
+
+        <h2 class="card-title">Skala</h2>
+
+        <p class="card-desc">
+          Startup projects, experiments and products
+          built under the VarityWeb ecosystem.
+        </p>
+
+        <span class="card-link" aria-hidden="true">
+          Open Skala
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 8h10M9 4l4 4-4 4"/>
+          </svg>
+        </span>
+      </a>
+
+    </div>
+  </main>
+
+  <div class="divider" role="separator"></div>
+
+  <footer>
+    <p>&copy; 2026 <a href="https://varityweb.com">VarityWeb</a>. All rights reserved.</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
